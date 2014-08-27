@@ -54,12 +54,12 @@
 
 			<classpath>
 				<pathelement path="${classpath}" />
-				<fileset dir="${lib.dir}">
+				<fileset dir="${javalib.dir}">
 					<include name="*.jar" />
 					<exclude name="ngat_tcm.jar" />
 					<exclude name="ngat_icm.jar" />
 				</fileset>
-				<fileset dir="${lib3p.dir}">
+				<fileset dir="${javalib.3p.dir}">
 					<include name="**/*.jar" />
 				</fileset>
 			</classpath>
@@ -81,12 +81,12 @@
                           ngat/tcm/test/BasicCalibrationUpdateListener.class" stubversion="1.2">
 			<classpath>
 				<pathelement path="${classpath}" />
-				<fileset dir="${lib.dir}">
+				<fileset dir="${javalib.dir}">
 					<include name="*.jar" />
 					<exclude name="ngat_tcm.jar" />
 					<exclude name="ngat_icm.jar" />
 				</fileset>
-				<fileset dir="${lib3p.dir}">
+				<fileset dir="${javalib.3p.dir}">
 					<include name="*.jar" />
 				</fileset>
 			</classpath>

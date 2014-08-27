@@ -59,7 +59,7 @@ public class AstrometryData implements Serializable, TelescopeStatus {
 		this.statusTimeStamp = statusTimeStamp;
 	}
 
-	@Override
+	
 	public String getCategoryName() {
 		return "AST";
 	}
