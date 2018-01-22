@@ -148,13 +148,13 @@ public class DefaultTrackingMonitor extends UnicastRemoteObject implements Teles
 	public void setTrackAlt(boolean trackAlt) {
 		this.trackAlt = trackAlt;
 		logger.create().info().level(2).extractCallInfo()
-		.msg("Altitude tracking monitor is "+(trackAz ? "enabled" : "disabled")).send();
+		.msg("Altitude tracking monitor is "+(trackAlt ? "enabled" : "disabled")).send();
 	}
 
 	public void setTrackRot(boolean trackRot) {
 		this.trackRot = trackRot;
 		logger.create().info().level(2).extractCallInfo()
-		.msg("Rotator tracking monitor is "+(trackAz ? "enabled" : "disabled")).send();
+		.msg("Rotator tracking monitor is "+(trackRot ? "enabled" : "disabled")).send();
 	}
 
 	/** Warning - alerts are now automatically enabled on reset ! */
