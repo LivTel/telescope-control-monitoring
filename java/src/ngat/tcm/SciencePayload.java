@@ -149,9 +149,9 @@ public class SciencePayload implements Serializable, XmlConfigurable {
 	}
 
 	public int getApertureNumberForInstrument(InstrumentDescriptor id) {
-		//System.err.println("SCI:getAp("+id.getInstrumentName()+")");
+		System.err.println("SCI:getAp("+id.getInstrumentName()+")");
 		int ap = apertureMap.get(id);
-		//System.err.println("SCI:getAp returns: "+ap);
+		System.err.println("SCI:getAp returns: "+ap);
 		return apertureMap.get(id);
 	}
 
@@ -239,6 +239,7 @@ public class SciencePayload implements Serializable, XmlConfigurable {
 			aliasMap.put(iid, alias);
 			rebootMap.put(iid, reboot);
 			mountMap.put(iid, new File(mount));
+			System.err.println("SCI::Adding aperture  [" + aperture + "] for instrument: " + iname);
 			apertureMap.put(iid, aperture);
 			portMap.put(iid, port);
 
