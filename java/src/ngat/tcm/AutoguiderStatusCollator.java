@@ -100,18 +100,36 @@ public class AutoguiderStatusCollator extends ControlThread {
 		
 		
 		int agTempStatus = 0;
+
+		// Andor asutoguider running at -40 (233K)
+		//if (agtempgot) {
 		
+		//	if (agtemp < 223) {				
+		//		agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_FAIL_LOW;				
+		//	} else if 
+		//		(agtemp < 228) {
+		//		agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_WARN_LOW;					
+		//	} else if
+		//		(agtemp < 238) {				
+		//		agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_OKAY;					
+		//	} else if (agtemp < 243) {				
+		//		agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_WARN_HIGH;	
+		//	} else {				
+		//		agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_FAIL_HIGH;	
+		//	}
+		//}
+		// PCO autoguider running at 0C (273K)
 		if (agtempgot) {
 		
-			if (agtemp < 223) {				
+			if (agtemp < 263) {				
 				agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_FAIL_LOW;				
 			} else if 
-				(agtemp < 228) {
+				(agtemp < 268) {
 				agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_WARN_LOW;					
 			} else if
-				(agtemp < 238) {				
+				(agtemp < 278) {				
 				agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_OKAY;					
-			} else if (agtemp < 243) {				
+			} else if (agtemp < 283) {				
 				agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_WARN_HIGH;	
 			} else {				
 				agTempStatus = AutoguiderActiveStatus.AUTOGUIDER_TEMPERATURE_FAIL_HIGH;	
