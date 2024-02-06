@@ -192,9 +192,13 @@ public class BasicTelescope extends UnicastRemoteObject implements Telescope, Te
 			focStatus.setMechanismName("SMF");
 			focStatus.setStatusTimeStamp(data.getTimeStamp());
 			focStatus.setCurrentPosition(mechData.secMirrorPos);
+			logger.create().info().level(4).extractCallInfo()
+				.msg("tcsStatusPacketUpdate:Secondary Mirror Position:"+mechData.secMirrorPos).send();
 			focStatus.setDemandPosition(mechData.secMirrorDemand);
 			focStatus.setMechanismState(mechData.secMirrorStatus);
 			focStatus.setFocusOffset(mechData.focusOffset);
+			logger.create().info().level(4).extractCallInfo()
+				.msg("tcsStatusPacketUpdate:Focus Offset:"+mechData.focusOffset).send();
 
 			AuxilliaryMechanismStatus pmcStatus = new AuxilliaryMechanismStatus("PMC");
 			pmcStatus.setStatusTimeStamp(data.getTimeStamp());
